@@ -14,3 +14,15 @@
 	path = vscoed-plugin-experiment
 	url = https://github.com/BizShuk/vscoed-plugin.git
 	branch = master
+[submodule "pm2"]
+	path = pm2
+	url = https://github.com/bizshuk/pm2
+[submodule "port"]
+	path = port
+	url = https://github.com/bizshuk/port
+[submodule "dux"]
+	path = dux
+	url = https://github.com/bizshuk/dux
+[submodule "video-utils"]
+	path = video-utils
+	url = https://github.com/bizshuk/video-utils
