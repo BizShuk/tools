@@ -30,3 +30,6 @@
 	path = video-utils
 	url = https://github.com/bizshuk/video-utils
 	branch = master
+[submodule "autop"]
+	path = autop
+	url = https://github.com/bizshuk/autop.git
