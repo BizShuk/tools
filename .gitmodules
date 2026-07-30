@@ -6,9 +6,9 @@
 	path = sandbox
 	url = https://github.com/BizShuk/sandbox.git
 	branch = master
-[submodule "voiceon"]
-	path = voiceon
-	url = https://github.com/BizShuk/voiceon.git
+[submodule "voice"]
+	path = voice
+	url = https://github.com/BizShuk/voice.git
 	branch = master
 [submodule "vscoed-plugin"]
 	path = vscoed-plugin
