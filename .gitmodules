@@ -33,3 +33,6 @@
 [submodule "autop"]
 	path = autop
 	url = https://github.com/bizshuk/autop.git
+[submodule "mdserver"]
+	path = mdserver
+	url = https://github.com/BizShuk/mdserver.git
