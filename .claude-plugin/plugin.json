@@ -17,5 +17,13 @@
   "license": "MIT",
   "name": "tools",
   "repository": "https://github.com/bizshuk/tools",
+  "skills": [
+    "bizshuk/autop",
+    "bizshuk/macemailapp",
+    "bizshuk/macnotesapp",
+    "bizshuk/mdserver",
+    "bizshuk/pm2",
+    "bizshuk/proxy"
+  ],
   "version": "1.0.0"
 }
