@@ -39,7 +39,7 @@
 	url = https://github.com/BizShuk/mdserver.git
 	branch = master
 [submodule "skills"]
-	path = skills
+	path = skills-cli
 	url = https://github.com/bizshuk/skills.git
 	branch = master
 [submodule "proxy"]
