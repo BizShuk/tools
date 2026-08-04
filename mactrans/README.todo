@@ -1,0 +1,16 @@
+# README.todo
+
+## Pending
+
+- [ ] 目標語言目前在 app 端寫死 zh-Hant（CLI 有 `--target`）。若要在 Services 選單提供
+      多個目標語言，需要在 Info.plist 加多筆 `NSServices` 條目 + 對應 selector。
+- [ ] 語言包未下載時只回報錯誤。下載提示 UI 只存在於 SwiftUI `.translationTask` 路徑，
+      要支援得在 app 內掛一個隱藏的 SwiftUI host view。
+- [ ] 沒有自動化測試。`TranslateCore` 可測（純函式 + async），但 `Translation.framework`
+      的行為依賴機器上已安裝的語言包，測試需要先宣告前置條件。
+- [ ] 通知內容過長時系統會截斷。目前靠「複製翻譯」動作補救，未做長文分段。
+
+## Archive
+
+- [x] 2026-08-01 建立專案：Translation.framework 核心、CLI、Services provider app、
+      安裝腳本、繁中文件。
