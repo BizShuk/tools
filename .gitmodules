@@ -55,3 +55,11 @@
 	url = https://github.com/BizShuk/sessiond.git
 	branch = master
 	
+[submodule "macnotesapp"]
+	path = macnotesapp
+	url = https://github.com/BizShuk/macnotesapp.git
+	branch = main
+[submodule "macemailapp"]
+	path = macemailapp
+	url = https://github.com/BizShuk/macemailapp.git
+	branch = master
