@@ -38,3 +38,19 @@
 	path = mdserver
 	url = https://github.com/BizShuk/mdserver.git
 	branch = master
+[submodule "skills"]
+	path = skills
+	url = https://github.com/bizshuk/skills.git
+	branch = master
+[submodule "proxy"]
+	path = proxy
+	url = https://github.com/BizShuk/proxy.git
+	branch = master
+[submodule "auth"]
+	path = auth
+	url = https://github.com/BizShuk/auth.git
+	branch = master
+[submodule "sessiond"]
+	path = sessiond
+	url = https://github.com/BizShuk/sessiond.git
+	branch = master
