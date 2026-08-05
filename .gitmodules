@@ -67,3 +67,7 @@
 	path = gx
 	url = https://github.com/BizShuk/gx.git
 	branch = master
+[submodule "mactrans"]
+	path = mactrans
+	url = https://github.com/BizShuk/mactrans.git
+	branch = master
