@@ -16,23 +16,23 @@
 	branch = master
 [submodule "pm2"]
 	path = pm2
-	url = https://github.com/bizshuk/pm2
+	url = https://github.com/BizShuk/pm2
 	branch = master
 [submodule "port"]
 	path = port
-	url = https://github.com/bizshuk/port
+	url = https://github.com/BizShuk/port
 	branch = master
 [submodule "dux"]
 	path = dux
-	url = https://github.com/bizshuk/dux
+	url = https://github.com/BizShuk/dux
 	branch = master
 [submodule "video-utils"]
 	path = video-utils
-	url = https://github.com/bizshuk/video-utils
+	url = https://github.com/BizShuk/video-utils
 	branch = master
 [submodule "autop"]
 	path = autop
-	url = https://github.com/bizshuk/autop.git
+	url = https://github.com/BizShuk/autop.git
 	branch = master
 [submodule "mdserver"]
 	path = mdserver
@@ -40,7 +40,7 @@
 	branch = master
 [submodule "skills"]
 	path = skills-cli
-	url = https://github.com/bizshuk/skills.git
+	url = https://github.com/BizShuk/skills.git
 	branch = master
 [submodule "proxy"]
 	path = proxy
