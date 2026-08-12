@@ -75,3 +75,7 @@
 	path = trans
 	url = https://github.com/BizShuk/trans.git
 	branch = master
+[submodule "ytdl"]
+	path = ytdl
+	url = https://github.com/BizShuk/ytdl.git
+	branch = master
