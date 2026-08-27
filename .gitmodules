@@ -79,3 +79,7 @@
 	path = ytdl
 	url = https://github.com/BizShuk/ytdl.git
 	branch = master
+[submodule "img"]
+	path = img
+	url = https://github.com/bizshuk/img.git
+	branch = master

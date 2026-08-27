@@ -9,9 +9,22 @@
 | `apple-notes` | `notes` | Apple Notes 筆記與資料夾管理 |
 | `apple-reminders` | `remindctl` | 提醒事項與清單管理 |
 
+`apple-calendar` 與 `apple-reminders` 由分類層的 `skills/` 提供；
+`apple-email` 與 `apple-notes` 分別由 `macemailapp/` 與 `macnotesapp/` submodule 提供。
+
+以及本分類其他工具的 CLI 技能：
+
+| 技能 (Skill) | CLI | 用途 | 來源 |
+| :--- | :--- | :--- | :--- |
+| `autop` | `autop` | 單一入口啟動本機 LLM CLI | `autop/` |
+| `img` | `img` | 圖片格式轉換、尺寸調整與影像屬性檢視 | `img/` |
+| `mdserver` | `mdserver` | 本機 Markdown 目錄預覽伺服器 | `mdserver/` |
+| `pm2` | `pm2` | 常駐程序、cron 任務與日誌管理 | `pm2/` |
+| `cleaning-vscode-forks` | — | 清理 VS Code fork 的記憶體與磁碟佔用 | `skills/` |
+
 ## 專案清單 (Projects)
 
-`tools/` 同時是 20 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
+`tools/` 同時是 21 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
 
 | 專案 (Project) | 一句話用途 (Purpose) | 主要技術 (Tech) | 型態 (Type) |
 | :--- | :--- | :--- | :--- |
@@ -20,6 +33,7 @@
 | `dux` | 高效能單次磁碟空間分析器 | Go (gosdk) | submodule |
 | `go-dependency-analysis` | 只讀、純標準庫的 Go workspace 依賴圖檢視 CLI | Go | submodule |
 | `gx` | 免 API key 從公開網頁擷取結構化識別資訊的通用 CLI | Go | submodule |
+| `img` | webp / jpg / png 互轉、尺寸調整與只讀檔頭的影像屬性報告 | Go (gosdk) | submodule |
 | `macemailapp` | Apple Mail.app 的 CLI 與 Python 函式庫 (`email`) | Python | submodule |
 | `macnotesapp` | Apple Notes 的 ID-first CLI 與函式庫 (`notes`, RhetTbull fork) | Python | submodule |
 | `mactrans` | macOS 服務選單「翻譯成繁體中文」, 結果以通知呈現 | Swift / Shell | submodule |

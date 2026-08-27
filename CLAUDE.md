@@ -10,19 +10,19 @@ tools/
 ├── README.md                     # 插件說明與技能清單
 ├── CLAUDE.md                     # 本檔
 ├── AGENTS.md -> CLAUDE.md        # 軟連結
-├── .gitmodules                   # 20 個 submodule 的 path / url / branch
+├── .gitmodules                   # 21 個 submodule 的 path / url / branch
 ├── .gitignore                    # 逐 submodule 列出的建置產物忽略清單
 ├── .claude-plugin/plugin.json    # Claude Code plugin manifest
 ├── skills/                       # 分類層自有技能 (3 個)
 ├── .claude/skills/               # 分類層之外另一份技能探索路徑
 ├── .agents/skills/ .grok/skills/ # 同上, 供其他 agent 工具探索
 ├── .vscode/                      # 目前為空目錄
-└── <20 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
+└── <21 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
 ```
 
 ## Submodule 機制 (Submodule Mechanics)
 
-本分類 repo 的 `origin` 是 `BizShuk/tools`。20 個專案全部以 git submodule 掛載，
+本分類 repo 的 `origin` 是 `BizShuk/tools`。21 個專案全部以 git submodule 掛載，
 `目前全部已初始化`。
 
 取得單一專案：
@@ -70,11 +70,11 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 - `skills/` 目錄下的技能由 plugin loader `自動探索`，不在 manifest 列舉。
 - `skills` 陣列列出`由 submodule 提供`的技能，形式為 `bizshuk/<submodule>`：
-  `autop`、`macemailapp`、`macnotesapp`、`mdserver`、`pm2`、`proxy`。
+  `autop`、`img`、`macemailapp`、`macnotesapp`、`mdserver`、`pm2`、`proxy`。
 
 `已知落差 (Known gap)：` manifest 的 `bizshuk/proxy` 目前找不到對應技能——
 `proxy/` 底下沒有 `skills/` 目錄，也沒有任何 `SKILL.md`；該 submodule 只有
-`plugins/proxy-imagegen/`（一個 MCP plugin，非 skill）。其餘五項可在
+`plugins/proxy-imagegen/`（一個 MCP plugin，非 skill）。其餘六項可在
 `<submodule>/skills/` 下找到對應目錄。
 
 ### `skills/`
@@ -104,7 +104,5 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 - `plugin.json` 的 `bizshuk/proxy` 指向不存在的技能。
 - `.claude/skills/`、`.agents/skills/`、`.grok/skills/` 與 `skills/` 內容不一致。
-- `README.md` 的技能表未涵蓋 `cleaning-vscode-forks`，也未說明 `apple-email` 與
-  `apple-notes` 來自 submodule。
 - submodule `skills` 的 name 與 path（`skills-cli`）不一致。
 - `.vscode/` 為空目錄。
