@@ -1,0 +1,70 @@
+{
+  "name": "bizshuk-tools",
+  "owner": {
+    "email": "shuk.liu@gmail.com",
+    "name": "Shuk Liu"
+  },
+  "metadata": {
+    "description": "macOS 與開發工具的 CLI 技能集合，以 git submodule 組裝"
+  },
+  "plugins": [
+    {
+      "name": "tools",
+      "source": "./",
+      "description": "macOS 與開發工具的 CLI 技能集合 (Apple 應用整合、圖片處理、程序管理)",
+      "version": "1.0.0",
+      "skills": [
+        "./skills"
+      ]
+    },
+    {
+      "name": "autop",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/autop"
+      }
+    },
+    {
+      "name": "img",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/img"
+      }
+    },
+    {
+      "name": "macemailapp",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/macemailapp"
+      }
+    },
+    {
+      "name": "macnotesapp",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/macnotesapp"
+      }
+    },
+    {
+      "name": "mdserver",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/mdserver"
+      }
+    },
+    {
+      "name": "pm2",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/pm2"
+      }
+    },
+    {
+      "name": "proxy",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/proxy"
+      }
+    }
+  ]
+}

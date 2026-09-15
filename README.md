@@ -20,6 +20,7 @@
 | `img` | `img` | 圖片格式轉換、尺寸調整與影像屬性檢視 | `img/` |
 | `mdserver` | `mdserver` | 本機 Markdown 目錄預覽伺服器 | `mdserver/` |
 | `pm2` | `pm2` | 常駐程序、cron 任務與日誌管理 | `pm2/` |
+| `imagine` | — | 透過 proxy 產生圖片 | `proxy/` |
 | `cleaning-vscode-forks` | — | 清理 VS Code fork 的記憶體與磁碟佔用 | `skills/` |
 
 ## 專案清單 (Projects)
@@ -55,8 +56,14 @@
 
 ## 安裝與使用 (Installation and Usage)
 
-此插件為獨立 GitHub repo（`bizshuk/tools`），可由任一 Claude Code
-marketplace 以 github source 引用：
+此 repo 自身即一個 marketplace（`bizshuk-tools`），內含單一 plugin `tools`：
+
+```bash
+/plugin marketplace add bizshuk/tools
+/plugin install tools@bizshuk-tools
+```
+
+也可由其他 marketplace 以 github source 引用：
 
 ```json
 {
@@ -65,8 +72,16 @@ marketplace 以 github source 引用：
 }
 ```
 
-本地技能由 `skills/` 自動探索；`hooks`／`agents`／`output-styles`
-亦由 Claude Code plugin loader 自動發現，不在 manifest 重複列舉。
+分類層技能（`apple-calendar`、`apple-reminders`、`cleaning-vscode-forks`）由
+`skills/` 提供。submodule 提供的技能（`autop`、`img`、`apple-email`、
+`apple-notes`、`mdserver`、`pm2`、`imagine`）則`各自是一個獨立 plugin`，
+在 `plugins` 陣列以 github source 指向該 submodule 的 repo，
+`不`重複列進 `tools` 的 `skills`。安裝時只做 plain clone、不會取 submodule，
+所以這些技能`一律從各自 repo 的遠端取得`——submodule 內尚未 push 的改動不會生效。
+
+本 repo `不使用 plugin.json`，`marketplace.json` 是唯一的 manifest。
+凡 submodule 內出現新的 `SKILL.md`，在 `plugins` 陣列補一個 github source 條目即可。
+`hooks`／`agents`／`output-styles` 由 plugin loader 自動發現，不在 manifest 列舉。
 各技能只在對應 Apple 應用操作或使用者明確要求時觸發；實際 CLI 的權限
 與安全守衛以各自 `SKILL.md` 為準。
 

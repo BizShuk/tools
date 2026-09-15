@@ -12,7 +12,7 @@ tools/
 ├── AGENTS.md -> CLAUDE.md        # 軟連結
 ├── .gitmodules                   # 21 個 submodule 的 path / url / branch
 ├── .gitignore                    # 逐 submodule 列出的建置產物忽略清單
-├── .claude-plugin/plugin.json    # Claude Code plugin manifest
+├── .claude-plugin/               # marketplace.json (唯一 manifest, 無 plugin.json)
 ├── skills/                       # 分類層自有技能 (3 個)
 ├── .claude/skills/               # 分類層之外另一份技能探索路徑
 ├── .agents/skills/ .grok/skills/ # 同上, 供其他 agent 工具探索
@@ -58,24 +58,49 @@ submodule，用 `skills/` 指分類層技能目錄。
 - 分類層文件只做導覽（`README.md`）與結構說明（本檔）。專案清單、技能表與安裝方式
   由 `README.md` 擁有，本檔一行指過去，不複製。
 - 新增工具：建立獨立 repo → `git submodule add` → 在 `README.md` 補一列 →
-  若要暴露成技能，於 `.claude-plugin/plugin.json` 的 `skills` 陣列登記。
+  若要暴露成技能，於 `.claude-plugin/marketplace.json` 的 `plugins` 陣列
+  補一個 github source 條目即可；`不要`同時寫進 `tools` 的 `skills`。
 - submodule 內的變更`在該 submodule 內 commit 與 push`；分類層只記錄 gitlink。
 - 分類層不對 submodule 做跨 repo 的批次建置；各專案的指令見各自 `package.json`。
 
 ## 分類層自身檔案 (Category-Level Files)
 
-### `.claude-plugin/plugin.json`
+### `.claude-plugin/marketplace.json`
 
-把本分類發布成一個 Claude Code plugin（`name: tools`）。技能來源有`兩處`：
+本分類`只有這一份 manifest`，`沒有 plugin.json`。它把 repo 自身宣告成 marketplace
+（`name: bizshuk-tools`），`plugins` 陣列有`兩類`條目，`職責不重疊`：
 
-- `skills/` 目錄下的技能由 plugin loader `自動探索`，不在 manifest 列舉。
-- `skills` 陣列列出`由 submodule 提供`的技能，形式為 `bizshuk/<submodule>`：
-  `autop`、`img`、`macemailapp`、`macnotesapp`、`mdserver`、`pm2`、`proxy`。
+- `tools`（`source: "./"`）—— 本 repo 自身。它的 `skills` 只有 `./skills` 一條，
+  `僅負責分類層自有技能`。
+- 七個 `github source` 條目 —— 每個帶技能的 submodule `各自是一個 plugin`，
+  由它自己的 repo 提供技能。
 
-`已知落差 (Known gap)：` manifest 的 `bizshuk/proxy` 目前找不到對應技能——
-`proxy/` 底下沒有 `skills/` 目錄，也沒有任何 `SKILL.md`；該 submodule 只有
-`plugins/proxy-imagegen/`（一個 MCP plugin，非 skill）。其餘六項可在
-`<submodule>/skills/` 下找到對應目錄。
+`submodule 技能不在 tools.skills 裡`。既然該 submodule 已被定址成獨立 plugin，
+再列一次 `./<submodule>/skills/<skill>` 就是同一個技能的第二份宣告，
+`會重複偵測`（實測從 10 個膨脹成 17 個）。一個技能只由一處擁有。
+
+規則是`凡 submodule 內有 SKILL.md, 就在 plugins 陣列補一個 github source 條目`，
+目前七項：
+
+| 技能 | submodule plugin | repo |
+| --- | --- | --- |
+| `autop` | `autop` | `bizshuk/autop` |
+| `img` | `img` | `bizshuk/img` |
+| `apple-email` | `macemailapp` | `bizshuk/macemailapp` |
+| `apple-notes` | `macnotesapp` | `bizshuk/macnotesapp` |
+| `mdserver` | `mdserver` | `bizshuk/mdserver` |
+| `pm2` | `pm2` | `bizshuk/pm2` |
+| `imagine` | `proxy` | `bizshuk/proxy` |
+
+`imagine` 在 `proxy` 內`不在慣例位置`（埋在 `plugins/proxy-imagegen/skills/` 底下），
+但因為整個 repo 交給 submodule 自己掃，這裡不必知道它的路徑。
+
+`macemailapp/tmp/SKILL.md` 是一份殘留的 `apple-notes` 複本，`不是技能`，
+應在該 submodule 內刪除。
+
+`取得來源的後果：`submodule 技能`一律從各自 repo 的遠端取得`，不讀本機工作目錄。
+因此`submodule 內尚未 push 的技能改動不會生效`，要先在該 submodule push。
+好處是安裝端`不需要 submodule`——marketplace 安裝只做 plain clone，本機路徑本來就會落空。
 
 ### `skills/`
 
@@ -102,7 +127,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 ## 待整理事項 (Housekeeping)
 
-- `plugin.json` 的 `bizshuk/proxy` 指向不存在的技能。
 - `.claude/skills/`、`.agents/skills/`、`.grok/skills/` 與 `skills/` 內容不一致。
 - submodule `skills` 的 name 與 path（`skills-cli`）不一致。
+- `macemailapp/tmp/SKILL.md` 是殘留的 `apple-notes` 複本，應在該 submodule 內刪除。
 - `.vscode/` 為空目錄。
