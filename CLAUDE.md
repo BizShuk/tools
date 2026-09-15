@@ -72,7 +72,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 - `tools`（`source: "./"`）—— 本 repo 自身。它的 `skills` 只有 `./skills` 一條，
   `僅負責分類層自有技能`。
-- 七個 `github source` 條目 —— 每個帶技能的 submodule `各自是一個 plugin`，
+- 八個 `github source` 條目 —— 每個帶技能的 submodule `各自是一個 plugin`，
   由它自己的 repo 提供技能。
 
 `submodule 技能不在 tools.skills 裡`。既然該 submodule 已被定址成獨立 plugin，
@@ -80,11 +80,12 @@ submodule，用 `skills/` 指分類層技能目錄。
 `會重複偵測`（實測從 10 個膨脹成 17 個）。一個技能只由一處擁有。
 
 規則是`凡 submodule 內有 SKILL.md, 就在 plugins 陣列補一個 github source 條目`，
-目前七項：
+目前八項：
 
 | 技能 | submodule plugin | repo |
 | --- | --- | --- |
 | `autop` | `autop` | `bizshuk/autop` |
+| `disk-analyze` | `dux` | `bizshuk/dux` |
 | `img` | `img` | `bizshuk/img` |
 | `apple-email` | `macemailapp` | `bizshuk/macemailapp` |
 | `apple-notes` | `macnotesapp` | `bizshuk/macnotesapp` |

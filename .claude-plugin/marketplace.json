@@ -25,6 +25,13 @@
       }
     },
     {
+      "name": "dux",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/dux"
+      }
+    },
+    {
       "name": "img",
       "source": {
         "source": "github",
