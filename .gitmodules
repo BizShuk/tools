@@ -26,10 +26,6 @@
 	path = dux
 	url = https://github.com/BizShuk/dux
 	branch = master
-[submodule "video-utils"]
-	path = video-utils
-	url = https://github.com/BizShuk/video-utils
-	branch = master
 [submodule "autop"]
 	path = autop
 	url = https://github.com/BizShuk/autop.git
