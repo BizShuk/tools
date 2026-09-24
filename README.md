@@ -45,6 +45,7 @@
 | `port` | 檢查連接埠狀態、監聽進程並匯出監控指標的 CLI | Go | submodule |
 | `proxy` | 通用 LLM API 轉譯代理 (CLI 客戶端 ↔ 多家上游 provider) | Go | submodule |
 | `sandbox` | 手動建立 process sandbox 的操作文件集 (`srt` wrapper 與 Claude Code sandbox) | Docs | submodule |
+| `sbackup` | 只有 macOS keychain 能解開的加密檔案備份, 金鑰可經 AirDrop 轉移 | Go (gosdk) | submodule |
 | `sessiond` | 跨 agent session 摘要 ingestor (由 Claude Code / Codex lifecycle hook 觸發) | Go | submodule |
 | `skills-cli` | Go 重寫的 `skills add [path]` 命令列工具 (submodule name 為 `skills`) | Go | submodule |
 | `trans` | local-first 語言轉換工具, 同一組 CLI 與 SDK 介面 | Go | submodule |

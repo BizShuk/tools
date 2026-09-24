@@ -82,4 +82,7 @@
 [submodule "vdl"]
 	path = vdl
 	url = https://github.com/BizShuk/vdl.git
+[submodule "sbackup"]
+	path = sbackup
+	url = https://github.com/bizshuk/sbackup.git
 	branch = master
