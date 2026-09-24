@@ -21,6 +21,7 @@
 | `mdserver` | `mdserver` | 本機 Markdown 目錄預覽伺服器 | `mdserver/` |
 | `pm2` | `pm2` | 常駐程序、cron 任務與日誌管理 | `pm2/` |
 | `imagine` | — | 透過 proxy 產生圖片 | `proxy/` |
+| `port-usage` | `port` | 83xx/85xx 埠號分段、取號、曝光面稽核與 port 衝突排查 | `port/` |
 | `cleaning-vscode-forks` | — | 清理 VS Code fork 的記憶體與磁碟佔用 | `skills/` |
 
 ## 專案清單 (Projects)
