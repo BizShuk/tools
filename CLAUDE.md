@@ -10,19 +10,19 @@ tools/
 ├── README.md                     # 插件說明與技能清單
 ├── CLAUDE.md                     # 本檔
 ├── AGENTS.md -> CLAUDE.md        # 軟連結
-├── .gitmodules                   # 21 個 submodule 的 path / url / branch
+├── .gitmodules                   # 22 個 submodule 的 path / url / branch
 ├── .gitignore                    # 逐 submodule 列出的建置產物忽略清單
 ├── .claude-plugin/               # marketplace.json (唯一 manifest, 無 plugin.json)
 ├── skills/                       # 分類層自有技能 (3 個)
 ├── .claude/skills/               # 分類層之外另一份技能探索路徑
 ├── .agents/skills/ .grok/skills/ # 同上, 供其他 agent 工具探索
 ├── .vscode/                      # 目前為空目錄
-└── <21 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
+└── <22 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
 ```
 
 ## Submodule 機制 (Submodule Mechanics)
 
-本分類 repo 的 `origin` 是 `BizShuk/tools`。21 個專案全部以 git submodule 掛載，
+本分類 repo 的 `origin` 是 `BizShuk/tools`。22 個專案全部以 git submodule 掛載，
 `目前全部已初始化`。
 
 取得單一專案：
@@ -72,7 +72,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 - `tools`（`source: "./"`）—— 本 repo 自身。它的 `skills` 只有 `./skills` 一條，
   `僅負責分類層自有技能`。
-- 八個 `github source` 條目 —— 每個帶技能的 submodule `各自是一個 plugin`，
+- 九個 `github source` 條目 —— 每個帶技能的 submodule `各自是一個 plugin`，
   由它自己的 repo 提供技能。
 
 `submodule 技能不在 tools.skills 裡`。既然該 submodule 已被定址成獨立 plugin，
@@ -80,7 +80,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 `會重複偵測`（實測從 10 個膨脹成 17 個）。一個技能只由一處擁有。
 
 規則是`凡 submodule 內有 SKILL.md, 就在 plugins 陣列補一個 github source 條目`，
-目前八項：
+目前九項：
 
 | 技能 | submodule plugin | repo |
 | --- | --- | --- |
@@ -92,6 +92,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 | `mdserver` | `mdserver` | `bizshuk/mdserver` |
 | `pm2` | `pm2` | `bizshuk/pm2` |
 | `imagine` | `proxy` | `bizshuk/proxy` |
+| `migrate-from-ytdl` | `vdl` | `bizshuk/vdl` |
 
 `imagine` 在 `proxy` 內`不在慣例位置`（埋在 `plugins/proxy-imagegen/skills/` 底下），
 但因為整個 repo 交給 submodule 自己掃，這裡不必知道它的路徑。

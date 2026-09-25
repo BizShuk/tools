@@ -72,6 +72,13 @@
         "source": "github",
         "repo": "bizshuk/proxy"
       }
+    },
+    {
+      "name": "vdl",
+      "source": {
+        "source": "github",
+        "repo": "bizshuk/vdl"
+      }
     }
   ]
 }

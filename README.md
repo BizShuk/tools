@@ -23,10 +23,11 @@
 | `imagine` | — | 透過 proxy 產生圖片 | `proxy/` |
 | `port-usage` | `port` | 83xx/85xx 埠號分段、取號、曝光面稽核與 port 衝突排查 | `port/` |
 | `cleaning-vscode-forks` | — | 清理 VS Code fork 的記憶體與磁碟佔用 | `skills/` |
+| `migrate-from-ytdl` | `vdl` | 將 ytdl 遷移至 vdl，並擴展多平台影片下載工作流 | `vdl/` |
 
 ## 專案清單 (Projects)
 
-`tools/` 同時是 21 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
+`tools/` 同時是 22 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
 
 | 專案 (Project) | 一句話用途 (Purpose) | 主要技術 (Tech) | 型態 (Type) |
 | :--- | :--- | :--- | :--- |
@@ -47,6 +48,7 @@
 | `sessiond` | 跨 agent session 摘要 ingestor (由 Claude Code / Codex lifecycle hook 觸發) | Go | submodule |
 | `skills-cli` | Go 重寫的 `skills add [path]` 命令列工具 (submodule name 為 `skills`) | Go | submodule |
 | `trans` | local-first 語言轉換工具, 同一組 CLI 與 SDK 介面 | Go | submodule |
+| `vdl` | 多平台 (Instagram/YouTube/TikTok 等) 影片/音訊下載 CLI，具品質分級與 TUI | Go | submodule |
 | `voice` | Apple MLX 上的 Qwen3-ASR 終端機語音轉錄 demo | Go + Python (MLX) | submodule |
 | `vscoed-plugin` | 單一 VS Code extension 承載多個獨立功能模組 | TypeScript | submodule |
 | `ytdl` | 將 YouTube URL 下載為 mp3 / mp4 的單一用途 CLI | Go | submodule |
@@ -74,7 +76,7 @@
 
 分類層技能（`apple-calendar`、`apple-reminders`、`cleaning-vscode-forks`）由
 `skills/` 提供。submodule 提供的技能（`autop`、`img`、`apple-email`、
-`apple-notes`、`mdserver`、`pm2`、`imagine`）則`各自是一個獨立 plugin`，
+`apple-notes`、`mdserver`、`pm2`、`imagine`、`migrate-from-ytdl`）則`各自是一個獨立 plugin`，
 在 `plugins` 陣列以 github source 指向該 submodule 的 repo，
 `不`重複列進 `tools` 的 `skills`。安裝時只做 plain clone、不會取 submodule，
 所以這些技能`一律從各自 repo 的遠端取得`——submodule 內尚未 push 的改動不會生效。
