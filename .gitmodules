@@ -82,3 +82,4 @@
 [submodule "vdl"]
 	path = vdl
 	url = https://github.com/BizShuk/vdl.git
+	branch = master
