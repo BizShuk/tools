@@ -86,3 +86,7 @@
 	path = sbackup
 	url = https://github.com/bizshuk/sbackup.git
 	branch = master
+[submodule "os-bench"]
+	path = os-bench
+	url = https://github.com/BizShuk/os-bench.git
+	branch = master

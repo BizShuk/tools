@@ -41,6 +41,7 @@
 | `macnotesapp` | Apple Notes 的 ID-first CLI 與函式庫 (`notes`, RhetTbull fork) | Python | submodule |
 | `mactrans` | macOS 服務選單「翻譯成繁體中文」, 結果以通知呈現 | Swift / Shell | submodule |
 | `mdserver` | 本機 Markdown 目錄預覽伺服器 | Go | submodule |
+| `os-bench` | 跑 CPU / memory / disk / network benchmark, 產出主機效能報告作為服務評估基準 | Go (gosdk) | submodule |
 | `pm2` | Go 實作的 PM2 風格 process manager (自動重啟、cron、TUI) | Go | submodule |
 | `port` | 檢查連接埠狀態、監聽進程並匯出監控指標的 CLI | Go | submodule |
 | `proxy` | 通用 LLM API 轉譯代理 (CLI 客戶端 ↔ 多家上游 provider) | Go | submodule |
