@@ -27,7 +27,7 @@
 
 ## 專案清單 (Projects)
 
-`tools/` 同時是 22 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
+`tools/` 同時是 23 個獨立工具 repo 的分類容器 (git submodule)。每個專案自帶統一介面 (README.md / CLAUDE.md / AGENTS.md / README.todo / docs/)；一句話用途取自各專案 README 第一段。
 
 | 專案 (Project) | 一句話用途 (Purpose) | 主要技術 (Tech) | 型態 (Type) |
 | :--- | :--- | :--- | :--- |
@@ -45,6 +45,7 @@
 | `pm2` | Go 實作的 PM2 風格 process manager (自動重啟、cron、TUI) | Go | submodule |
 | `port` | 檢查連接埠狀態、監聽進程並匯出監控指標的 CLI | Go | submodule |
 | `proxy` | 通用 LLM API 轉譯代理 (CLI 客戶端 ↔ 多家上游 provider) | Go | submodule |
+| `rdb-migration` | 在 MySQL, PostgreSQL, SQLite 之間搬移整個資料庫或指定的表 | Go (gosdk) | submodule |
 | `sandbox` | 手動建立 process sandbox 的操作文件集 (`srt` wrapper 與 Claude Code sandbox) | Docs | submodule |
 | `sbackup` | 只有 macOS keychain 能解開的加密檔案備份, 金鑰可經 AirDrop 轉移 | Go (gosdk) | submodule |
 | `sessiond` | 跨 agent session 摘要 ingestor (由 Claude Code / Codex lifecycle hook 觸發) | Go | submodule |

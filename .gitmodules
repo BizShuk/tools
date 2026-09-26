@@ -90,3 +90,7 @@
 	path = os-bench
 	url = https://github.com/BizShuk/os-bench.git
 	branch = master
+[submodule "rdb-migration"]
+	path = rdb-migration
+	url = https://github.com/bizshuk/rdb-migration.git
+	branch = master
