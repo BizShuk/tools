@@ -54,7 +54,6 @@
 | `vdl` | 多平台 (Instagram/YouTube/TikTok 等) 影片/音訊下載 CLI，具品質分級與 TUI | Go | submodule |
 | `voice` | Apple MLX 上的 Qwen3-ASR 終端機語音轉錄 demo | Go + Python (MLX) | submodule |
 | `vscoed-plugin` | 單一 VS Code extension 承載多個獨立功能模組 | TypeScript | submodule |
-| `ytdl` | 將 YouTube URL 下載為 mp3 / mp4 的單一用途 CLI | Go | submodule |
 
 專案間無 build-time 相依 (`auth` 為 agentsdk 家族的模組, 由 `ai/agentSDK` 端消費); 每個 submodule 以
 `git submodule update --init <name>` 取得。

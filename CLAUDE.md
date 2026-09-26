@@ -23,7 +23,7 @@ tools/
 ## Submodule 機制 (Submodule Mechanics)
 
 本分類 repo 的 `origin` 是 `BizShuk/tools`。23 個專案全部以 git submodule 掛載，
-`目前全部已初始化`。
+`vdl` 以外皆已初始化。
 
 取得單一專案：
 
@@ -37,7 +37,7 @@ git submodule update --init <name>
 git submodule update --init --recursive
 ```
 
-`未初始化的 submodule：` 無 (None)。
+`未初始化的 submodule：` `vdl`。
 
 ### 命名注意 (Naming Caveat)
 
