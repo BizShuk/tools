@@ -8,8 +8,7 @@
 ```tree
 tools/
 ├── README.md                     # 插件說明與技能清單
-├── CLAUDE.md                     # 本檔
-├── AGENTS.md -> CLAUDE.md        # 軟連結
+├── AGENTS.md                     # 本檔
 ├── .gitmodules                   # 23 個 submodule 的 path / url / branch
 ├── .gitignore                    # 逐 submodule 列出的建置產物忽略清單
 ├── .claude-plugin/               # marketplace.json (唯一 manifest, 無 plugin.json)
