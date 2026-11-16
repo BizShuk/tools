@@ -56,7 +56,7 @@
 	url = https://github.com/BizShuk/macnotesapp.git
 	branch = master
 [submodule "macemailapp"]
-	path = macemailapp
+	path = archive/macemailapp
 	url = https://github.com/BizShuk/macemailapp.git
 	branch = master
 [submodule "gx"]
