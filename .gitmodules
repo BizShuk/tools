@@ -94,3 +94,6 @@
 	path = rdb-migration
 	url = https://github.com/bizshuk/rdb-migration.git
 	branch = master
+[submodule "demo-mod"]
+	path = demo-mod
+	url = https://github.com/BizShuk/demo-mod.git

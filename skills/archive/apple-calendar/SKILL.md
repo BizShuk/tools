@@ -20,7 +20,7 @@ metadata:
 命令列存取 macOS Apple Calendar：列出日曆、查詢事件、建立／更新／刪除事件、
 以及跨日曆查空檔 (free/busy)。
 
-```bash
+```bash@
 npm install -g @joargp/accli   # macOS only — 底層使用 JavaScript for Automation
 ```
 
@@ -28,16 +28,16 @@ npm install -g @joargp/accli   # macOS only — 底層使用 JavaScript for Auto
 
 完整旗標、選項表與範例見 [references/commands.md](references/commands.md)。
 
-| 指令 | 用途 |
-| --- | --- |
-| `accli calendars` | 列出所有日曆與其 persistent ID — 任何操作前先跑這個 |
-| `accli events <cal>` | 查詢區間內事件（`--from` / `--to` / `--query` / `--max`） |
-| `accli event <cal> <id>` | 取得單一事件細節 |
-| `accli create <cal>` | 建立事件（`--summary` / `--start` / `--end` 必填） |
-| `accli update <cal> <id>` | 更新事件，只帶要改的欄位 |
-| `accli delete <cal> <id>` | 刪除事件 — 破壞性，執行前必須向使用者確認 |
-| `accli freebusy` | 跨日曆查忙碌時段，排除已取消／已婉拒／transparent 事件 |
-| `accli config` | 設定／顯示／清除預設日曆 |
+| 指令                      | 用途                                                      |
+| ------------------------- | --------------------------------------------------------- |
+| `accli calendars`         | 列出所有日曆與其 persistent ID — 任何操作前先跑這個       |
+| `accli events <cal>`      | 查詢區間內事件（`--from` / `--to` / `--query` / `--max`） |
+| `accli event <cal> <id>`  | 取得單一事件細節                                          |
+| `accli create <cal>`      | 建立事件（`--summary` / `--start` / `--end` 必填）        |
+| `accli update <cal> <id>` | 更新事件，只帶要改的欄位                                  |
+| `accli delete <cal> <id>` | 刪除事件 — 破壞性，執行前必須向使用者確認                 |
+| `accli freebusy`          | 跨日曆查忙碌時段，排除已取消／已婉拒／transparent 事件    |
+| `accli config`            | 設定／顯示／清除預設日曆                                  |
 
 `DateTime 格式`：timed 事件用 `YYYY-MM-DDTHH:mm`，all-day 事件用 `YYYY-MM-DD`。
 
