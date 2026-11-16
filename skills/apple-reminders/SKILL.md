@@ -8,6 +8,7 @@ description: >
 version: "1.1.0"
 allowed-tools: Bash
 metadata:
+    source: https://github.com/BizShuk/tools
     type: reference
     platforms: [macos]
     prerequisites:

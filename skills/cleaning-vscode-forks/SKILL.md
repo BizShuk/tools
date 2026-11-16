@@ -1,6 +1,8 @@
 ---
 name: cleaning-vscode-forks
 description: Use when Antigravity, Cursor, Windsurf, or another VS Code fork is eating excessive RAM or disk — many sidecar processes, a ballooning extensions directory, duplicate parallel installs, or the user quoting a memory number from the IDE's own process panel.
+metadata:
+    source: https://github.com/BizShuk/tools
 ---
 
 # Cleaning VS Code Forks
