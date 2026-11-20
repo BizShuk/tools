@@ -1496,3 +1496,4 @@ mactrans/.build/arm64-apple-macosx/release/mactrans.dSYM/Contents/Info.plist
 mactrans/.build/arm64-apple-macosx/release/mactrans.dSYM/Contents/Resources/DWARF/mactrans
 mactrans/.build/arm64-apple-macosx/release/mactrans.dSYM/Contents/Resources/Relocations/aarch64/mactrans.yml
 mactrans/.build/arm64-apple-macosx/release/mactrans.product/Objects.LinkFileList
+**/node_modules/
