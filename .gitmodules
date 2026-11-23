@@ -97,3 +97,7 @@
 	path = ocr_agent
 	url = https://github.com/BizShuk/ocr_agent.git
 	branch = master
+[submodule "upasspdf"]
+	path = upasspdf
+	url = https://github.com/BizShuk/upasspdf.git
+	branch = master

@@ -51,6 +51,7 @@
 | `sessiond` | 跨 agent session 摘要 ingestor (由 Claude Code / Codex lifecycle hook 觸發) | Go | submodule |
 | `skills-cli` | Go 重寫的 `skills add [path]` 命令列工具 (submodule name 為 `skills`) | Go | submodule |
 | `trans` | local-first 語言轉換工具, 同一組 CLI 與 SDK 介面 | Go | submodule |
+| `upasspdf` | 依機構設定 (資料夾, 檔名 glob, 密碼環境變數) 就地移除 PDF 開啟密碼的 CLI | Go (gosdk) | submodule |
 | `vdl` | 多平台 (Instagram/YouTube/TikTok 等) 影片/音訊下載 CLI，具品質分級與 TUI | Go | submodule |
 | `voice` | Apple MLX 上的 Qwen3-ASR 終端機語音轉錄 demo | Go + Python (MLX) | submodule |
 | `vscoed-plugin` | 單一 VS Code extension 承載多個獨立功能模組 | TypeScript | submodule |
