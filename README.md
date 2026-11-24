@@ -34,12 +34,10 @@
 | `auth` | agentsdk 家族的 LLM provider 認證模組 | Go | submodule |
 | `autop` | 單一入口啟動已設定的本機 LLM CLI (claude / codex / grok 等) | Go (cobra) | submodule |
 | `dux` | 高效能單次磁碟空間分析器 | Go (gosdk) | submodule |
-| `go-dependency-analysis` | 只讀、純標準庫的 Go workspace 依賴圖檢視 CLI | Go | submodule |
 | `gx` | 免 API key 從公開網頁擷取結構化識別資訊的通用 CLI | Go | submodule |
 | `img` | webp / jpg / png 互轉、尺寸調整與只讀檔頭的影像屬性報告 | Go (gosdk) | submodule |
 | `macemailapp` | Apple Mail.app 的 CLI 與 Python 函式庫 (`email`) | Python | submodule |
 | `macnotesapp` | Apple Notes 的 ID-first CLI 與函式庫 (`notes`, RhetTbull fork) | Python | submodule |
-| `mactrans` | macOS 服務選單「翻譯成繁體中文」, 結果以通知呈現 | Swift / Shell | submodule |
 | `mdserver` | 本機 Markdown 目錄預覽伺服器 | Go | submodule |
 | `os-bench` | 跑 CPU / memory / disk / network benchmark, 產出主機效能報告作為服務評估基準 | Go (gosdk) | submodule |
 | `pm2` | Go 實作的 PM2 風格 process manager (自動重啟、cron、TUI) | Go | submodule |
@@ -47,10 +45,8 @@
 | `proxy` | 通用 LLM API 轉譯代理 (CLI 客戶端 ↔ 多家上游 provider) | Go | submodule |
 | `rdb-migration` | 在 MySQL, PostgreSQL, SQLite 之間搬移整個資料庫或指定的表 | Go (gosdk) | submodule |
 | `sandbox` | 手動建立 process sandbox 的操作文件集 (`srt` wrapper 與 Claude Code sandbox) | Docs | submodule |
-| `sbackup` | 只有 macOS keychain 能解開的加密檔案備份, 金鑰可經 AirDrop 轉移 | Go (gosdk) | submodule |
 | `sessiond` | 跨 agent session 摘要 ingestor (由 Claude Code / Codex lifecycle hook 觸發) | Go | submodule |
 | `skills-cli` | Go 重寫的 `skills add [path]` 命令列工具 (submodule name 為 `skills`) | Go | submodule |
-| `trans` | local-first 語言轉換工具, 同一組 CLI 與 SDK 介面 | Go | submodule |
 | `upasspdf` | 依機構設定 (資料夾, 檔名 glob, 密碼環境變數) 就地移除 PDF 開啟密碼的 CLI | Go (gosdk) | submodule |
 | `vdl` | 多平台 (Instagram/YouTube/TikTok 等) 影片/音訊下載 CLI，具品質分級與 TUI | Go | submodule |
 | `voice` | Apple MLX 上的 Qwen3-ASR 終端機語音轉錄 demo | Go + Python (MLX) | submodule |

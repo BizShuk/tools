@@ -9,19 +9,19 @@
 tools/
 ├── README.md                     # 插件說明與技能清單
 ├── AGENTS.md                     # 本檔
-├── .gitmodules                   # 26 個 submodule 的 path / url / branch
-├── .gitignore                    # 逐 submodule 列出的建置產物忽略清單
+├── .gitmodules                   # 22 個 submodule 的 path / url / branch
+├── .gitignore                    # submodule 建置產物忽略清單
 ├── .claude-plugin/               # marketplace.json (唯一 manifest, 無 plugin.json)
 ├── skills/                       # 分類層自有技能 (3 個)
 ├── .claude/skills/               # 分類層之外另一份技能探索路徑
 ├── .agents/skills/ .grok/skills/ # 同上, 供其他 agent 工具探索
 ├── .vscode/                      # 目前為空目錄
-└── <26 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
+└── <22 個 submodule 目錄>        # 各自獨立的 repo, 見 .gitmodules
 ```
 
 ## Submodule 機制 (Submodule Mechanics)
 
-本分類 repo 的 `origin` 是 `BizShuk/tools`。26 個專案全部以 git submodule 掛載，
+本分類 repo 的 `origin` 是 `BizShuk/tools`。22 個專案全部以 git submodule 掛載，
 `vdl` 以外皆已初始化。
 
 取得單一專案：
@@ -118,8 +118,7 @@ submodule，用 `skills/` 指分類層技能目錄。
 
 ### `.gitignore`
 
-1498 行，逐一列出各 submodule 的建置產物路徑（`mactrans/.build/...` 之類）。
-它忽略的是`submodule 工作目錄內`的產物，避免這些檔案干擾分類層的 `git status`。
+忽略 `**/node_modules/` 等建置產物，避免干擾分類層的 `git status`。
 新增 submodule 且該專案會產生建置產物時，需在此補上對應路徑。
 
 ## 開發指南 (Development Guide)
