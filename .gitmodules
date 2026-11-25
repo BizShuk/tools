@@ -85,3 +85,6 @@
 	path = upasspdf
 	url = https://github.com/BizShuk/upasspdf.git
 	branch = master
+[submodule "ptt-agent"]
+	path = ptt-agent
+	url = https://github.com/BizShuk/ptt-agent.git
